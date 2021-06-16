@@ -12,6 +12,7 @@
 		<module>doctor-registration</module>
 		<module>patient-service</module>
 		<module>search-service</module>
+		<module>health-manager-model</module>
 	</modules>
 	<properties>
 		<java.version>1.8</java.version>
