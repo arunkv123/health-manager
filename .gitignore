@@ -1,0 +1,16 @@
+# Eclipse Core      
+.project
+
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
+
+/target/
+
+*.MF
+MANIFEST
+/MANIFEST.MF
+**/MANIFEST.MF
+**/MANIFEST.*
+*/.settings
+.settings
+*/target/**
