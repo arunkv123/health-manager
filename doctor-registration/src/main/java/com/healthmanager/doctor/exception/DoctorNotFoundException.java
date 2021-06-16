@@ -1,4 +1,4 @@
-package com.healthmanager.search.exception;
+package com.healthmanager.doctor.exception;
 
 public class DoctorNotFoundException extends Exception {
 
