@@ -5,7 +5,7 @@
     <artifactId>health-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>doctor-registration</artifactId>
+  <artifactId>doctor-service</artifactId>
   <dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
