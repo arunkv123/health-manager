@@ -1,8 +1,10 @@
 package com.healthmanager.model.doctor;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class Doctor {
 
 	private String name;
@@ -15,9 +17,9 @@ public class Doctor {
 	
 	private String email;
 	
-	private int organisationId;
+	private String organisation;
 	
-	private int department;
+	private String department;
 	
 	private Address address;
 }

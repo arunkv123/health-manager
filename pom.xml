@@ -9,9 +9,9 @@
 	<modules>
 		<module>registry-service</module>
 		<module>gateway-service</module>
-		<module>doctor-registration</module>
+		<module>doctor-service</module>
 		<module>patient-service</module>
-		<module>search-service</module>
+		<module>common-service</module>
 		<module>health-manager-model</module>
 	</modules>
 	<properties>
