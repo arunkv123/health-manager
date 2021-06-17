@@ -13,7 +13,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import com.healthmanager.doctor.exception.DoctorNotFoundException;
 
+import lombok.extern.slf4j.Slf4j;
+
 @ControllerAdvice
+@Slf4j
 public class SearchExceptionHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(DoctorNotFoundException.class)
@@ -21,6 +24,7 @@ public class SearchExceptionHandler extends ResponseEntityExceptionHandler {
 		Map<String, Object> body = new LinkedHashMap<>();
 		body.put("timestamp", LocalDateTime.now());
 		body.put("message", ex.getMessage());
+		log.error("Doctor not found", ex);
 		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
 	}
 }

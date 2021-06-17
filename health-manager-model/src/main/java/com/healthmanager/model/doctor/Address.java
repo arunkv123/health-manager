@@ -1,8 +1,10 @@
 package com.healthmanager.model.doctor;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class Address {
 
 	private String state;

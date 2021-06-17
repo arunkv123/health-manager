@@ -7,10 +7,14 @@ public class DoctorSearchCriteria {
 
 	private String zipCode;
 	
-	private Long district;
+	private String district;
 	
-	private Long State;
+	private String State;
 	
 	private String name;
+	
+	private String organisation;
+	
+	private String department;
 	
 }

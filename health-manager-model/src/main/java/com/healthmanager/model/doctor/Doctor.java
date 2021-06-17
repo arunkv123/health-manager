@@ -1,5 +1,7 @@
 package com.healthmanager.model.doctor;
 
+import java.util.Date;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,7 +13,7 @@ public class Doctor {
 	
 	private String salutation;
 	
-	private String dateOfBirth;
+	private Date dateOfBirth;
 	
 	private String phoneNumber;
 	

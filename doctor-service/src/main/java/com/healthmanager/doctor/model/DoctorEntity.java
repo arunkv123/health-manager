@@ -1,5 +1,7 @@
 package com.healthmanager.doctor.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,19 +21,23 @@ public class DoctorEntity {
 
 	private String salutation;
 
-	private String dateOfBirth;
+	private Date dateOfBirth;
 
 	private String phoneNumber;
 
 	private String email;
 
-	private Long organisation;
+	private String organisation;
 
-	private Long department;
-	
-	private Long state;
-	
-	private Long district;
-	
-	
+	private String department;
+
+	private String state;
+
+	private String district;
+
+	private String zipCode;
+
+	private String address1;
+
+	private String address2;
 }

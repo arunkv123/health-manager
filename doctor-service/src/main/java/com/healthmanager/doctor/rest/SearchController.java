@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.healthmanager.doctor.exception.DoctorNotFoundException;
 import com.healthmanager.doctor.service.SearchService;
 import com.healthmanager.model.doctor.Doctor;
 import com.healthmanager.model.search.DoctorSearchCriteria;
@@ -20,8 +21,15 @@ public class SearchController {
 	@Autowired
 	private SearchService searchService;
 
+	@GetMapping("/alldoctors")
+	public ResponseEntity<List<Doctor>> getAllDoctors() throws DoctorNotFoundException {
+		List<Doctor> doctors = searchService.getAllDoctors();
+		return ResponseEntity.accepted().body(doctors);
+	}
+
 	@GetMapping("/doctor")
-	public ResponseEntity<List<Doctor>> searchDoctor(@RequestParam DoctorSearchCriteria doctorSearchCriteria) {
+	public ResponseEntity<List<Doctor>> searchDoctor(@RequestParam DoctorSearchCriteria doctorSearchCriteria)
+			throws DoctorNotFoundException {
 		List<Doctor> doctors = searchService.searchDoctor(doctorSearchCriteria);
 		return ResponseEntity.accepted().body(doctors);
 	}
