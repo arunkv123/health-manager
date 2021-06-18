@@ -15,19 +15,19 @@ import com.healthmanager.model.doctor.Doctor;
 import com.healthmanager.model.search.DoctorSearchCriteria;
 
 @RestController
-@RequestMapping("/search")
+//@RequestMapping("/doctor")
 public class SearchController {
 
 	@Autowired
 	private SearchService searchService;
 
-	@GetMapping("/alldoctors")
+	@GetMapping("/search/all")
 	public ResponseEntity<List<Doctor>> getAllDoctors() throws DoctorNotFoundException {
 		List<Doctor> doctors = searchService.getAllDoctors();
 		return ResponseEntity.accepted().body(doctors);
 	}
 
-	@GetMapping("/doctor")
+	@GetMapping("/search")
 	public ResponseEntity<List<Doctor>> searchDoctor(@RequestParam DoctorSearchCriteria doctorSearchCriteria)
 			throws DoctorNotFoundException {
 		List<Doctor> doctors = searchService.searchDoctor(doctorSearchCriteria);
