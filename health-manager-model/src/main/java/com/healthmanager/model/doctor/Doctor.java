@@ -3,9 +3,10 @@ package com.healthmanager.model.doctor;
 import java.util.Date;
 
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.healthmanager.model.annotation.Dob;
 
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class Doctor {
 
 	@NonNull
 	@DateTimeFormat(pattern = "dd-MM-YYYY")
+	@Dob(doctor = true, message = "Doctor age should be >21 and not a future date")
 	private Date dateOfBirth;
 
 	@NonNull
