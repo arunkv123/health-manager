@@ -11,7 +11,12 @@ spring:
   h2: 
     console:
       enabled: true
-      
+
+---
+
+spring:
+  profiles: dev
+  
 server:
   port: 8090
 eureka:
@@ -20,3 +25,11 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: false
+
+---
+
+spring:
+  profiles: test
+  cloud:
+    discovery:  
+        enabled: false
